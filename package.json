@@ -15,7 +15,9 @@
     "query": "tsc && node build/index.js query",
     "migrate": "tsc && node build/db/migrate.js",
     "export": "tsc && node build/export-library.js",
-    "mcp": "tsc && node build/mcp/server.js"
+    "mcp": "tsc && node build/mcp/server.js",
+    "test": "tsc && node tests/unit.cjs",
+    "test:unit": "tsc && node tests/unit.cjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",

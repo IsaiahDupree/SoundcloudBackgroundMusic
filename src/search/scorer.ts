@@ -10,7 +10,7 @@ export interface ScoredTrack {
   reasons: string[];
 }
 
-function inRange(value: number | null, min: number, max: number): number {
+export function inRange(value: number | null, min: number, max: number): number {
   if (value == null) return 0.5; // neutral if unknown
   if (value >= min && value <= max) return 1.0;
   const distBelow = min - value;
