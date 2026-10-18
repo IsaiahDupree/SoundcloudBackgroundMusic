@@ -1,0 +1,42 @@
+{
+  "name": "soundcloud-background-music",
+  "version": "1.0.0",
+  "description": "AI-powered SoundCloud music library with semantic search for background music selection",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node build/index.js",
+    "pipeline": "tsc && node build/index.js pipeline",
+    "pipeline:fetch": "tsc && node build/index.js pipeline --stage=fetch",
+    "pipeline:download": "tsc && node build/index.js pipeline --stage=download",
+    "pipeline:analyze": "tsc && node build/index.js pipeline --stage=analyze",
+    "pipeline:embed": "tsc && node build/index.js pipeline --stage=embed",
+    "serve": "tsc && node build/index.js serve",
+    "query": "tsc && node build/index.js query",
+    "migrate": "tsc && node build/db/migrate.js",
+    "export": "tsc && node build/export-library.js",
+    "mcp": "tsc && node build/mcp/server.js",
+    "test": "tsc && node tests/unit.cjs",
+    "test:unit": "tsc && node tests/unit.cjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@supabase/supabase-js": "^2.78.0",
+    "axios": "^1.7.0",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.0",
+    "fluent-ffmpeg": "^2.1.3",
+    "meyda": "^5.6.3",
+    "openai": "^4.85.0",
+    "wav-decoder": "^1.3.0",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/fluent-ffmpeg": "^2.1.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

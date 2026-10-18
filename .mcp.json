@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "soundcloud-music": {
+      "command": "node",
+      "args": ["C:\\Users\\Isaia\\Documents\\Coding\\SoundcloudBackgroundMusic\\build\\mcp\\server.js"],
+      "env": {}
+    }
+  }
+}
